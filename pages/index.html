@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TMDb</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/new-elements.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <div itemid="MAIN">
+    <!-- NAV BAR -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo"><img style="width: 37%;" src="../images/iso_blanco_transparent.png" alt="Logo" /></a>
+        <a href="" class="show-navbar-drop">
+            <div class="navbar-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div> 
+                <div class="bar"></div>
+            </div>
+        </a>    
+        <ul class="navbar-lists">
+            <li class="nav-items">
+                <a href="#" id="popular-nav" class="nav-link">
+                    <div class="nav-group-link"> 
+                        <img class="nav-link-icons" src="../images/popular.png" alt="popular icon" />      
+                        <span class="nav-link-name">Popular</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-items">
+                <a href="#" id="top-rated-nav" class="nav-link">
+                    <div class="nav-group-link">
+                        <img class="nav-link-icons popularicons" src="../images/popular.png" alt="popular icon" />   
+                        <span class="nav-link-name">Top Rated</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-items">
+                <a href="#" id="upcoming-nav" class="nav-link">
+                    <div class="nav-group-link">
+                        <img class="nav-link-icons" src="../images/upcoming.png" alt="popular icon" />   
+                        <span class="nav-link-name">Upcoming</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-items">
+                <a href="#" id="now-playing-nav" class="nav-link">
+                    <div class="nav-group-link">
+                        <img class="nav-link-icons" src="../images/now_playing.png" alt="popular icon" />   
+                        <span class="nav-link-name">Now Playing</span>
+                    </div>
+                </a>
+            </li> 
+        </ul>
+    </nav>
+      
+    <!-- HEADER -->    
+    <header class="header">
+        <div class="head-searchbar">
+            <input type="text" placeholder="Search for a movie..." id="head-searchbar-input">
+            <img class="head-searchbar-icon" src="../images/search.png" alt="Search Icon" /> 
+        </div>
+    </header>     
+        
+    <!-- MOVIE HEADER -->
+    <section class="movies-section-main">
+        <div class="container-main home1" type="page" mode="collection">
+            
+            <!-- BANNER -->
+            <header class="sec-header">
+                <div class="sec-header-wrap">
+                    <h1 class="sec-header-title">The Movie DB App</h1>
+                </div>
+            </header>
+            
+            <!-- MOVIE SECTION POPULAR -->
+            <div id="popular" class="wrapper">
+                <div class="movies">
+                    <header class="header-movies">
+                        <h2 class="category-title">Popular Movies</h2>
+                            <a href="view_all.html" class="view-all-link view-all"> View All </a>
+                    </header>
+                    <ul id="popular-section" class="list-of-movies">
+                        <li id="#show-desc" class="movies-item">
+                            <a href="#" class="movies-item-link">
+                                <figure class="movies-poster" onclick="showModal()">
+                                    <img src="../images/no-image.png"  alt="" class="movies-item-image is-loaded"> 
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="#" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="#" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="#" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="#" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="movies-load-more">
+                        <a href="#" class="load-more button">Load More</a>
+                    </div>
+                </div> 
+            </div>
+            
+            <!-- MOVIE SECTION TOP RATED -->
+            <div id="top-rated" class="wrapper">
+                <div class="movies">
+                    <header class="header-movies">
+                        <h2 class="category-title">Top Rated Movies</h2>
+                        <a href="view_all.html" class="view-all-link view-all"> View All </a>
+                    </header>
+                    <ul id="top-rated-section" class="list-of-movies">
+                        <li class="movies-item ">
+                            <a href="/movie/19404" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/496243" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/278" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/238" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/372058" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="movies-load-more">
+                        <a href="#" class="load-more button">Load More</a>
+                    </div>
+                </div> 
+            </div>
+            
+            <!-- MOVIE SECTION UPCOMING -->
+            <div id="upcoming" class="wrapper">
+                <div class="movies">
+                    <header class="header-movies">
+                        <h2 class="category-title">Upcoming Movies</h2>
+                        <a href="view_all.html" class="view-all-link view-all"> View All </a>
+                    </header>
+                    <ul id="upcoming-section" class="list-of-movies">
+                        <li class="movies-item ">
+                            <a href="/movie/420818" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/301528" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/466272" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/511987" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/384018" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="movies-load-more">
+                        <a href="#" class="load-more button">Load More</a>
+                    </div>
+                </div> 
+            </div>
+            
+            <!-- MOVIE SECTION NOW PLAYING -->
+            <div id="now-playing" class="wrapper">
+                <div class="movies">
+                    <header class="header-movies">
+                        <h2 class="category-title">Now Playing Movies</h2>
+                        <a href="view_all.html" class="view-all-link view-all"> View All </a>
+                    </header>
+                    <ul id="now-playing-section" class="list-of-movies">
+                        <li class="movies-item ">
+                            <a href="/movie/420818" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/566555" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/429617" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/447404" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="movies-item ">
+                            <a href="/movie/301528" class="movies-item-link">
+                                <figure class="movies-poster">
+                                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                                </figure>
+                                <div class="item-full-content">
+                                    <p class="item-title"></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="movies-load-more">
+                        <a href="#" class="load-more button">Load More</a>
+                    </div>
+                </div> 
+            </div> 
+
+            <!-- SEARCH -->
+            <div id="search-container" class="wrapper">
+                <div class="movies">
+                    <header class="header-movies">
+                        <h2 id="banner-title" class="category-title"></h2>
+                    </header>
+                    <ul id="search-section" class="list-of-movies">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ul style="display: none;">
+        <li id="movie-node" class="movies-item ">
+            <a href="/movie/301528" class="movies-item-link">
+                <figure class="movies-poster">
+                    <img src="../images/no-image.png" alt="" class="movies-item-image is-loaded">
+                </figure>
+                <div class="item-full-content">
+                    <p class="item-title"></p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+      
+    <!-- MODAL  -->
+    <div id="movie-description-popup" class="movie-desc-popup"> 
+        <div class="movie-popup-box-full">
+            <section class="movie">
+                <div id="selected-movie" class="movie-container">
+                    <header id="firstBlock" class="movie-header" style="background-image: url('../images/placeholder.png');">
+                        <div class="movie-wrap movie-wrap-header">
+                            <figure class="movie-poster"><img src="../images/no-image.png" class="movie-img is-loaded"> 
+                            </figure>
+                            <div class="movie-title">
+                                <h1> 
+                                    <span class="movie-title-text"></span><br>
+                                    <span id="subtitle"></span>
+                                </h1> 
+                            </div>
+                        </div>
+                    </header>
+                    <div class="movie-main">
+                        <div class="movie-wrap movie-wrap-main"> 
+                            <div class="movie-info">
+                                <div class="movie-description">
+                                </div>
+                                <div class="movie-details">
+                                    <div class="movie-details-block">
+                                        <h2 class="movie-details-title">Genres</h2>
+                                        <div class="movie-details-text">
+                                        </div>
+                                    </div>
+                                    <div class="movie-details-block">
+                                        <h2 class="movie-details-title">Release date</h2>
+                                        <div class="movie-details-text release-date"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <button id="movie-popup-close" onclick="closeModals()"></button>
+        </div> 
+        <i id="loader"></i>
+        </div>
+    </div>
+    <script src="../javascript/index.js"></script>
+    </body>
+</html>

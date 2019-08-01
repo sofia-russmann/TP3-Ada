@@ -1,0 +1,133 @@
+.header {
+    position: fixed;
+    background: #fff;
+    z-index: 15;
+    display: flex;
+    @media (min-width:$medium-breakpoint) { 
+        width: 100%;
+        height: 75px;
+        margin-left: 95px;
+        border-top: 0;
+        border-bottom: 0;
+        top: 0; 
+    }
+    .head-searchbar {
+        height: 50px;
+        display: flex;
+        position: relative;
+        z-index: 5;
+        width: calc(100% - 110px);
+        position: fixed;
+        top: 0;
+        right: 55px;
+        @media (min-width:$medium-breakpoint) { 
+            position: relative;
+            height: 75px;
+            right: 0; 
+        } 
+        #head-searchbar-input {
+            display: block;
+            width: 100%;
+            padding: 15px 20px 15px 45px;
+            outline: none;
+            border: 0;
+            background-color: transparent;
+            color: #081c24;
+            font-weight: 300;
+            font-size: 16px;
+
+            @media (min-width:$medium-breakpoint) { 
+                padding: 15px 30px 15px 60px;
+            }
+
+            @media (min-width:$large-breakpoint) { 
+                padding: 15px 30px 15px 80px;
+            }
+            @media (min-width:$mega-large-breakpoint) { 
+                padding: 15px 30px 15px 90px; 
+            }
+        }
+
+        .head-searchbar-icon {
+            width: 14px;
+            height: 14px;
+            fill: rgba(8, 28, 36, .5);
+            transition: fill .5s ease;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -7px;
+            left: 20px;
+            @media (min-width:$medium-breakpoint) { 
+                width: 18px;
+                height: 18px;
+                margin-top: -9px;
+                left: 30px 
+            }
+            @media (min-width:$large-breakpoint) { 
+                    left: 50px; 
+            }
+
+            @media (min-width:$mega-large-breakpoint) { 
+                    left: 60px; 
+            }
+        }
+
+        #head-searchbar-input:focus+.head-searchbar-icon {
+            fill: #081c24;
+        }
+    }
+}
+
+section.movies-section-main {
+    position: relative;
+    padding: 50px 0 0;
+    @media (min-width:$medium-breakpoint) { 
+    width: calc(100% - 95px);
+    padding: 75px 0 0;
+    margin-left: 95px;
+    position: relative; 
+    }
+    .container-main{
+        header.sec-header:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: hsla(0, 0%, 97%, .7)
+        }
+        header.sec-header{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            position: relative;
+            background-color: #081c24;
+            background-image: url("../images/batman.jpg");
+            @media (min-width:$medium-breakpoint) { 
+                height: 384px; 
+            }
+            .sec-header-wrap{
+                text-align: center;
+                position: relative;
+                h1.sec-header-title{
+                    font-weight: 500;
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    letter-spacing: .5px;
+                    color: #081c24;
+                    margin: 0;
+                    @media (min-width:$medium-breakpoint) { 
+                        font-size: 28px 
+                    }
+                }
+            }
+        }
+    }
+}
