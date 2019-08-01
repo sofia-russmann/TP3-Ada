@@ -1,0 +1,194 @@
+body {
+    #movieModal {
+    width: 100%;
+    height: 100vh;
+    background-color: $background-color;
+    z-index: 5;
+    position: fixed;
+    overflow: auto;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #loading {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid $border-color;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #movieInfo {
+        visibility: hidden;
+        position: absolute;
+        width: 786px;
+        height: 820px;
+        z-index: 6;
+        left: 50%;
+        transform: translateX(-384px);
+        top: 40px;
+        #firstBlock {
+            width: 786px;
+            height: 350px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                filter: brightness(0.2);
+            }
+            #button-close {
+                width: 40px;
+                height: 40px;
+                transition: 0.5s;
+                background-color: none;
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #cross {
+                    transform: scale(2.2);
+                    font-weight: 300;
+                    line-height: 18px;
+                    color: $cross-color;
+                    display: inline-block;
+                    top: 0;
+                    left: 0;
+                    z-index: 7;
+                }
+                :hover {
+                    background-color: $border-color;
+                }
+            }
+            #movieTitles {
+                width: 50%;
+                height: auto;
+                justify-content: left;
+                position: absolute;
+                top: 122px;
+                margin-left: 50%;
+                padding: 20px 40px 20px 0px;
+                box-sizing: border-box;
+                h1 {
+                    margin: 0 auto;
+                    font-size: 30px;
+                    font-weight: 500;
+                    color: $border-color;
+                }
+                h4 {
+                    margin: 0 auto;
+                    font-size: 14px;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    color: $title-color;
+                }
+            }
+        }
+        #secondBlock{
+            width: 786px;
+            height: 430px;
+            background-color: $second-background-color;
+            #description {
+                width: 50%;
+                height: 430px;
+                position: absolute;
+                box-sizing: border-box;
+                padding: 40px 40px 40px 0;
+                left: 50%;
+                color: $block-color;
+                font-weight: 300;
+                line-height: 1.8;
+                #overview {
+                    max-height: 168px;
+                    overflow: hidden;
+                }
+                h3 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $border-color;
+                    margin: 0;
+                }
+                p {
+                    font-size: 14px;
+                    margin: 0 0 40px 0;
+                }
+            }
+        }
+        #movieImage {
+            width: 40%;
+            height: 450px;
+            position: absolute;
+            top: 0;
+            box-sizing: border-box;
+            margin: 40px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 786px) {
+    body {
+        #movieModal {
+            #movieInfo {
+                width: 100%;
+                left: 0;
+                transform: translateX(0);
+                top: 0;
+            }
+            #firstBlock{
+                #movieTitles{
+                    width: 100%;
+                    text-align: center;
+                    padding: 20px 40px 20px 40px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    body {
+        #movieModal {
+            #movieInfo {
+                width: 100%;
+                #secondBlock {
+                    height: auto;
+                    #description {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 786px) {
+    body {
+        #movieModal {
+            #movieDetails {
+                #secondBlock {
+                    width: 100%;
+                    #description {
+                        width: 100%;
+                        padding: 20px;
+                        left: 0px;
+                    }
+                }
+                #movieInfo{
+                    #movieImage{
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+}
