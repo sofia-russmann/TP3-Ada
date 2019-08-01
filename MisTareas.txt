@@ -1,0 +1,7 @@
+TRABAJO PRÁCTICO NÚMERO 3.
+Integrante: Sofia Russmann.
+
+Mis tareas:
+Maquetado de Modal. Incluye html y sass
+Javascript completo. Incluye home y modal
+
